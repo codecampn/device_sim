@@ -17,28 +17,29 @@ const _iphone13Frame = FrameConfiguration(
   outerRadius: BorderRadius.all(Radius.circular(68)),
   innerRadius: BorderRadius.all(Radius.circular(48)),
   features: [
-    StaticFeature(portraitAlignment: Alignment.topCenter, child: IPhone13Notch()),
+    StaticFeature(
+        portraitAlignment: Alignment.topCenter, child: IPhone13Notch()),
   ],
 );
 
 const _iphone13Screen = ScreenConfiguration(
-    standardRectangleDiagonalInInch: 6.06,
-    size: Size(390.0, 844.0),
-    portraitPadding: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 34.0),
-    portraitViewPadding: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 34.0),
-    portraitViewInsets: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
-    portraitPaddingIfKeyboard: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 0.0),
-    portraitViewPaddingIfKeyboard: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 34.0),
-    portraitViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 336.0),
-    landscapePadding: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 21.0),
-    landscapeViewPadding: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 21.0),
-    landscapeViewInsets: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
-    landscapePaddingIfKeyboard: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 0.0),
-    landscapeViewPaddingIfKeyboard: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 21.0),
-    landscapeViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 219.0),
-    textScaleFactor: 1.0,
-    devicePixelRatio: 3.0,
-    targetPlatform: TargetPlatform.iOS,
+  standardRectangleDiagonalInInch: 6.06,
+  size: Size(390.0, 844.0),
+  portraitPadding: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 34.0),
+  portraitViewPadding: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 34.0),
+  portraitViewInsets: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
+  portraitPaddingIfKeyboard: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 0.0),
+  portraitViewPaddingIfKeyboard: EdgeInsets.fromLTRB(0.0, 47.0, 0.0, 34.0),
+  portraitViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 336.0),
+  landscapePadding: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 21.0),
+  landscapeViewPadding: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 21.0),
+  landscapeViewInsets: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
+  landscapePaddingIfKeyboard: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 0.0),
+  landscapeViewPaddingIfKeyboard: EdgeInsets.fromLTRB(47.0, 0.0, 47.0, 21.0),
+  landscapeViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 219.0),
+  textScaleFactor: 1.0,
+  devicePixelRatio: 3.0,
+  targetPlatform: TargetPlatform.iOS,
   features: [
     Align(
       alignment: Alignment.bottomCenter,
@@ -47,4 +48,5 @@ const _iphone13Screen = ScreenConfiguration(
         widthInLandscape: 220.0,
       ),
     ),
-  ],);
+  ],
+);

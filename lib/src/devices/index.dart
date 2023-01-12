@@ -6,5 +6,3 @@ export 'ipad_pro_129_gen5.dart';
 export 'google_pixel_5.dart';
 export 'iphone_se_gen3.dart';
 export 'features/index.dart';
-
-

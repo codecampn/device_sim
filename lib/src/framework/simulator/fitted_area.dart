@@ -32,13 +32,15 @@ class FittedArea extends StatelessWidget {
         widthToUse = heightToUse * aspectRatio;
       }
 
-      var deviceArea = (aspectRatio / ( 1 + pow(aspectRatio, 2))) * pow(diagonalInInch, 2);
+      var deviceArea =
+          (aspectRatio / (1 + pow(aspectRatio, 2))) * pow(diagonalInInch, 2);
 
       var pixelsPerInch = 96;
 
-      var virtualArea = (widthToUse / pixelsPerInch) * (heightToUse / pixelsPerInch);
+      var virtualArea =
+          (widthToUse / pixelsPerInch) * (heightToUse / pixelsPerInch);
 
-      WidgetsBinding.instance.addPostFrameCallback((_){
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         onZoomChanged(virtualArea / deviceArea);
       });
 

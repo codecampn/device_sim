@@ -17,7 +17,8 @@ const _iphone13ProMaxFrame = FrameConfiguration(
   outerRadius: BorderRadius.all(Radius.circular(68)),
   innerRadius: BorderRadius.all(Radius.circular(48)),
   features: [
-    StaticFeature(portraitAlignment: Alignment.topCenter, child: IPhone13Notch()),
+    StaticFeature(
+        portraitAlignment: Alignment.topCenter, child: IPhone13Notch()),
   ],
 );
 

@@ -35,12 +35,12 @@ const _screen = ScreenConfiguration(
     textScaleFactor: 1.0,
     devicePixelRatio: 2.75,
     targetPlatform: TargetPlatform.android,
-features: [
-  Align(
-    alignment: Alignment.bottomCenter,
-    child: HomeIndicator(widthInPortrait: 110, widthInLandscape: 110),
-  )
-]);
+    features: [
+      Align(
+        alignment: Alignment.bottomCenter,
+        child: HomeIndicator(widthInPortrait: 110, widthInLandscape: 110),
+      )
+    ]);
 
 class _Cam extends StatelessWidget {
   const _Cam({Key? key}) : super(key: key);

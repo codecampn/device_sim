@@ -7,7 +7,6 @@ import '../screen/screen_configuration.dart';
 
 /// Configuration of a specific device.
 class DeviceConfiguration extends Equatable {
-
   /// Name of the device.
   final String name;
 

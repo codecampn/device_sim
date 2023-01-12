@@ -6,7 +6,6 @@ import 'package:flutter/widgets.dart';
 /// Configuration of a specific device screen.
 /// Use [CalibrationScreen] to find out the correct values.
 class ScreenConfiguration extends Equatable {
-
   /// Diagonal of screen's standard rectangle in inch
   final double standardRectangleDiagonalInInch;
 

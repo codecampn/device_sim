@@ -18,3 +18,6 @@
 ## 0.0.2
 * fixed images on pub.dev
 * fixed code format issues
+
+## 0.1.0
+* fixed code format issues

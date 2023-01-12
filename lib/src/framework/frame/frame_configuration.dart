@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 
 /// Configuration of a specific device frame.
 class FrameConfiguration extends Equatable {
-
   /// Thickness of frame's sides.
   final EdgeInsets frameInsets;
 
