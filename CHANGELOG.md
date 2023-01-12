@@ -21,3 +21,6 @@
 
 ## 0.1.0
 * fixed code format issues
+
+## 0.1.1
+* fixed license
