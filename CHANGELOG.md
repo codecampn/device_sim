@@ -14,3 +14,7 @@
 * Feature: show keyboard
 * Feature: show unsafe areas
 * Feature: calibrate to 100%
+
+## 0.0.2
+* fixed images on pub.dev
+* fixed code format issues

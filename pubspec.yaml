@@ -1,6 +1,6 @@
 name: device_sim
 description: A device simulator to speed up development for different devices.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/codecampn/device_sim
 
 environment:

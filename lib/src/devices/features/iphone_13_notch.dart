@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 /// Notch of iPhone 13.
 class IPhone13Notch extends StatelessWidget {
-
   /// Creates a new [IPhone13Notch].
   const IPhone13Notch({Key? key, this.width = 160.0, this.height = 34.0})
       : super(key: key);

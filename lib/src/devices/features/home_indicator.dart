@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 /// Home indicator of iPhones.
 class HomeIndicator extends StatelessWidget {
-
   /// Creates a new [HomeIndicator].
   const HomeIndicator(
       {Key? key, required this.widthInPortrait, required this.widthInLandscape})

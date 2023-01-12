@@ -12,7 +12,7 @@ Approximates how an app looks and behaves on a device by simulating:
 - text styles
 - (and more)
 
-![Sample](device_sim.gif)
+![Sample](https://github.com/codecampn/device_sim/raw/main/device_sim.gif)
 
 ## Usage
 
@@ -109,4 +109,4 @@ void main() {
 }
 ```
 
-<img src="calibration_screen.png" width="700">
+<img src="https://github.com/codecampn/device_sim/raw/main/calibration_screen.png" width="700">
