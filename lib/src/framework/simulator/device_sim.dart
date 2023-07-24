@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:device_sim/device_sim.dart';
 import 'package:flutter/foundation.dart';
@@ -71,7 +72,6 @@ class _DeviceSimState extends State<DeviceSim> {
     if (!_isEnabled()) {
       return widget.builder(context);
     }
-
     return WithMediaQueryAndDirection(
       child: Container(
         color: widget.backgroundColor ?? const Color(0xffeeeeee),
@@ -80,15 +80,42 @@ class _DeviceSimState extends State<DeviceSim> {
             if (deviceEnabled)
               Expanded(
                 child: LayoutBuilder(builder: (context, layout) {
-                  return FittedArea(
-                    size: currentDevice.sizeFor(orientation),
-                    diagonalInInch:
-                        currentDevice.standardRectangleDiagonalInInch,
-                    onZoomChanged: (factor) {
+                  final screenSize = currentDevice.sizeFor(orientation);
+                  final diagonalInInch =
+                      currentDevice.standardRectangleDiagonalInInch;
+
+                  final availableWidth = layout.maxWidth;
+                  final availableHeight = layout.maxHeight;
+
+                  final aspectRatio = screenSize.width / screenSize.height;
+                  var widthToUse = availableWidth;
+                  var heightToUse = widthToUse * (1 / aspectRatio);
+                  if (heightToUse > availableHeight) {
+                    heightToUse = availableHeight;
+                    widthToUse = heightToUse * aspectRatio;
+                  }
+
+                  var deviceArea = (aspectRatio / (1 + pow(aspectRatio, 2))) *
+                      pow(diagonalInInch, 2);
+
+                  var pixelsPerInch = 96;
+
+                  var virtualArea = (widthToUse / pixelsPerInch) *
+                      (heightToUse / pixelsPerInch);
+
+                  var newZoom = virtualArea / deviceArea;
+
+                  if (newZoom != zoom) {
+                    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
                       setState(() {
-                        zoom = factor;
+                        zoom = newZoom;
                       });
-                    },
+                    });
+                  }
+
+                  return FittedArea(
+                    sizeToUse: Size(widthToUse, heightToUse),
+                    screenSize: screenSize,
                     child: Frame(
                         frameConfiguration: currentDevice.frameConfiguration,
                         child: Screen(

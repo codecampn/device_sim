@@ -24,3 +24,6 @@
 
 ## 0.1.1
 * fixed license
+
+## 0.1.2
+* removed unnecessary build loop
