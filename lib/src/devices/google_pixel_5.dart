@@ -34,6 +34,15 @@ const _screen = ScreenConfiguration(
     landscapeViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 248.4),
     textScaleFactor: 1.0,
     devicePixelRatio: 2.75,
+    statusBarConfiguration: TopConfiguration(
+        portraitHeight: 24.0,
+        landscapeHeight: 0.0,
+        isOverlapped: true,
+        backgroundColor: Colors.black26),
+    bottomConfiguration: BottomConfiguration(
+        portraitOverlayHeight: 24,
+        portraitExclusiveHeight: 0,
+        backgroundColor: Colors.black26),
     targetPlatform: TargetPlatform.android,
     features: [
       Align(

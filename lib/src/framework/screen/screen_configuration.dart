@@ -57,6 +57,12 @@ class ScreenConfiguration extends Equatable {
   /// Screen's target platform.
   final TargetPlatform targetPlatform;
 
+  /// Default appearance of status bar.
+  final TopConfiguration statusBarConfiguration;
+
+  /// Default appearance of bottom of screen.
+  final BottomConfiguration bottomConfiguration;
+
   /// Frame's additional features (like a home indicator or status bar).
   final List<Widget> features;
 
@@ -78,6 +84,8 @@ class ScreenConfiguration extends Equatable {
       required this.landscapeViewInsetsIfKeyboard,
       required this.textScaleFactor,
       required this.devicePixelRatio,
+      required this.statusBarConfiguration,
+      required this.bottomConfiguration,
       required this.targetPlatform,
       this.features = const []});
 
@@ -100,6 +108,8 @@ class ScreenConfiguration extends Equatable {
         textScaleFactor,
         devicePixelRatio,
         targetPlatform,
+        statusBarConfiguration,
+        bottomConfiguration,
         features
       ];
 }

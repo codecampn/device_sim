@@ -1,3 +1,4 @@
+import 'package:device_sim/device_sim.dart';
 import 'package:flutter/material.dart';
 import '../framework/device/device_configuration.dart';
 import '../framework/frame/frame_configuration.dart';
@@ -34,6 +35,15 @@ const _ipadPro129Gen5Screen = ScreenConfiguration(
     landscapeViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 498.0),
     textScaleFactor: 1.0,
     devicePixelRatio: 2.0,
+    statusBarConfiguration: TopConfiguration(
+        portraitHeight: 24.0,
+        landscapeHeight: 0.0,
+        isOverlapped: true,
+        backgroundColor: Colors.black26),
+    bottomConfiguration: BottomConfiguration(
+        portraitOverlayHeight: 24,
+        portraitExclusiveHeight: 0,
+        backgroundColor: Colors.black26),
     targetPlatform: TargetPlatform.iOS,
     features: [
       Align(

@@ -1,3 +1,4 @@
+import 'package:device_sim/device_sim.dart';
 import 'package:flutter/material.dart';
 import '../devices/features/iphone_13_notch.dart';
 import '../framework/device/device_configuration.dart';
@@ -39,6 +40,15 @@ const _iphone13ProScreen = ScreenConfiguration(
     landscapeViewInsetsIfKeyboard: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 219.0),
     textScaleFactor: 1.0,
     devicePixelRatio: 3.0,
+    statusBarConfiguration: TopConfiguration(
+        portraitHeight: 24.0,
+        landscapeHeight: 0.0,
+        isOverlapped: true,
+        backgroundColor: Colors.black26),
+    bottomConfiguration: BottomConfiguration(
+        portraitOverlayHeight: 24,
+        portraitExclusiveHeight: 0,
+        backgroundColor: Colors.black26),
     targetPlatform: TargetPlatform.iOS,
     features: [
       Align(

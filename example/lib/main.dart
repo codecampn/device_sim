@@ -22,11 +22,13 @@ void main() {
   // mode and how to restore navigation by swiping up/down from the edges
   // SystemChrome.setEnabledSystemUIOverlays([]);  <-- this is native full screen mode
 
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    systemNavigationBarColor: Colors.transparent,
-  ));
+  /*SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.black12,
+  ));*/
 
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  // SystemChrome.setEnabledSystemUIOverlays([]);
+
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
   runApp(const MyApp());
   // runApp(const MaterialApp(home: CalibrationScreen()));
@@ -47,9 +49,12 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: ThemeData(
               primarySwatch: Colors.blue,
+              backgroundColor: Colors.green,
+              scaffoldBackgroundColor: Colors.yellow
             ),
             // home: const MyHomePage(title: 'Flutter Demo Home Page'),
             home: const CalibrationScreen(),
+            // home: const ShowcaseScreen(),
           );
         });
   }

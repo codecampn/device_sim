@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:device_sim/device_sim.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../simulator/fitted_area.dart';
 import '../frame/frame.dart';
 import '../simulator/with_media_query_and_direction.dart';
@@ -13,13 +14,16 @@ import '../simulator/toolbar.dart';
 /// Add a [DeviceSim] around your app and set [useInheritedMediaQuery] of your [MaterialApp] to true.
 class DeviceSim extends StatefulWidget {
   /// Creates a new [DeviceSim].
-  const DeviceSim(
-      {Key? key,
-      this.devices = const [iphone13, iphone13ProMax, ipad129Gen5],
-      required this.builder,
-      this.backgroundColor,
-      this.isEnabled})
-      : assert(devices.length > 0),
+  const DeviceSim({
+    Key? key,
+    this.devices = const [iphone13, iphone13ProMax, ipad129Gen5],
+    required this.builder,
+    this.backgroundColor,
+    this.isEnabled,
+    this.mode,
+    this.overlays,
+    this.systemUiOverlayStyle,
+  })  : assert(devices.length > 0),
         super(key: key);
 
   /// List of devices to simulate. Must not be empty.
@@ -30,6 +34,12 @@ class DeviceSim extends StatefulWidget {
 
   /// Whether the simulator is active. Defaults to true if on web or desktop.
   final bool? isEnabled;
+
+  final SystemUiMode? mode;
+
+  final List<SystemUiOverlay>? overlays;
+
+  final SystemUiOverlayStyle? systemUiOverlayStyle;
 
   /// The actual app.
   final WidgetBuilder builder;
